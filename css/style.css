@@ -1,0 +1,124 @@
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+*:not(i) {
+  filter: drop-shadow(2px 2px rgba(0, 0, 0, 0.1803921569));
+}
+
+button {
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  border: 0.1rem solid transparent;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 800;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #f2f2f2;
+}
+button:hover {
+  color: #000;
+  background-color: #f2f2f2;
+}
+button[type=reset] {
+  background-color: #f5a206;
+  color: #000;
+  /* border-color: #f5a206; */
+}
+button[type=reset]:hover {
+  background-color: #000;
+  color: #f5a206;
+}
+button[type=submit] {
+  color: #f5a206;
+  /* border-color: #f5a206; */
+}
+button[type=submit]:hover {
+  background-color: #f5a206;
+  color: #000;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-height: 100svh;
+  width: 100vw;
+  width: 100svw;
+  background-color: #f5a206;
+  background-image: url("https://images.hdqwalls.com/download/geometry-abstract-8k-2o-7680x4320.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-blend-mode: luminosity;
+}
+body #calc-body {
+  background: rgba(9, 9, 9, 0.8);
+  border-radius: 1rem;
+  filter: none;
+  padding-top: 1rem;
+}
+body #calc-body header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+}
+body #calc-body header label,
+body #calc-body header input {
+  padding: 0.5rem;
+  width: 75%;
+  background-color: rgba(0, 0, 0, 0.4588235294);
+  border: 2px solid rgba(242, 242, 242, 0.1254901961);
+}
+body #calc-body header label {
+  border-radius: 0.5rem 0.5rem 0 0;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: end;
+  filter: none;
+  color: rgba(242, 242, 242, 0.8);
+  border-bottom: none;
+}
+body #calc-body header label::before {
+  content: "Bruh";
+  opacity: 0;
+}
+body #calc-body header input {
+  text-align: end;
+  border-top: none;
+  border-radius: 0 0 0.5rem 0.5rem;
+  outline: none;
+  cursor: none;
+  font-size: 24px;
+  font-weight: 800;
+  color: #f2f2f2;
+}
+body #calc-body #buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+body #calc-body #buttons .numeros {
+  width: 100%;
+}
+body #calc-body #buttons .numeros .numeric {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+body #calc-body #buttons .numeros .numeric:last-child {
+  padding-bottom: 1.5rem;
+  grid-template-columns: 2fr repeat(2, 1fr);
+}
+body #calc-body #buttons .numeros .numeric:last-child button:first-child {
+  aspect-ratio: 0;
+  border-radius: 25rem;
+}
+
+/*# sourceMappingURL=style.css.map */
