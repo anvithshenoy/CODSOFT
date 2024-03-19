@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/9f5fa7ae6d.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="calc-body">
+      <header>
+        <label for="calculate" id="memoryLabel"></label>
+        <input type="text" name="calculate" id="calculate" />
+      </header>
+
+      <div id="buttons">
+        <main>
+          <div class="numeros">
+            <div class="numeric" id="set-0">
+              <button type="reset" onclick="clearResult()">AC</button>
+              <button type="submit" onclick="appendToResult('%')">%</button>
+              <button type="submit" onclick="deleteNum()" aria-label="DEL">
+                <i class="fa-solid fa-delete-left"></i>
+              </button>
+              <button type="submit" onclick="operate('/')">/</button>
+            </div>
+            <div class="numeric" id="set-1">
+              <button type="button" onclick="appendToResult(7)">7</button>
+              <button type="button" onclick="appendToResult(8)">8</button>
+              <button type="button" onclick="appendToResult(9)">9</button>
+              <button type="submit" onclick="operate('*')">*</button>
+            </div>
+            <div class="numeric" id="set-2">
+              <button type="button" onclick="appendToResult(4)">4</button>
+              <button type="button" onclick="appendToResult(5)">5</button>
+              <button type="button" onclick="appendToResult(6)">6</button>
+              <button type="submit" onclick="operate('-')">-</button>
+            </div>
+            <div class="numeric" id="set-3">
+              <button type="button" onclick="appendToResult(1)">1</button>
+              <button type="button" onclick="appendToResult(2)">2</button>
+              <button type="button" onclick="appendToResult(3)">3</button>
+              <button type="submit" onclick="operate('+')">+</button>
+            </div>
+            <div class="numeric" id="set-4">
+              <button type="button" onclick="appendToResult(0)">0</button>
+              <button type="button" onclick="appendToResult('.')">.</button>
+              <button type="submit" onclick="calculate()">=</button>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <script src="script/index.js"></script>
+  </body>
+</html>
