@@ -1,5 +1,9 @@
-@keyframes scroll-watcher {
+@keyframes border-anim {
+  from {
+    border-color: transparent;
+  }
+
   to {
-    scale: 1 1;
+    border-color: var(--var-1);
   }
 }

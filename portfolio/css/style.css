@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Saira+Stencil+One&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -5,46 +6,145 @@
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+:root {
+  --var-1: #f70000;
+  --dark: #111;
+  --light: #f2f2f2;
+  --bg-img: url("../img/WHAoUx.jpg");
+  --head-font: "Saira Stencil One", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: var(--light);
+}
+
+a,
+label {
+  cursor: pointer;
+}
+
 body {
-  background-color: #121212;
+  background-color: var(--var-1);
   height: 100vh;
   height: 100svh;
   width: 100vw;
   width: 100svw;
-}
-body .scroll-watcher {
-  height: 10px;
-  position: fixed;
-  top: 0;
-  z-index: 1000;
-  background-color: lime;
-  width: 100%;
-  scale: 0 1;
-  transform-origin: left;
-  animation: scroll-watcher linear;
-  animation-timeline: scroll();
+  scroll-behavior: smooth;
 }
 body nav {
-  background-color: #f2f2f2;
+  background-color: var(--dark);
+  clip-path: polygon(0 0, 15% 100%, 100% 100%, 100% 0);
   display: flex;
+  flex-direction: row-reverse;
   position: absolute;
-  right: 0;
+  top: 1rem;
+  right: 1rem;
+  padding: 0 0 0 2.5rem;
+  color: var(--light);
+}
+body nav #toggler {
+  display: none;
+}
+body nav input[type=checkbox]:checked + div#items {
+  display: none;
+  transition: all 2s ease-in-out;
 }
 body nav div#items {
   display: flex;
 }
 body nav div#items div.item {
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem;
 }
 body nav div#items label {
+  border-bottom: 2px solid transparent;
+  border-radius: 1px;
   padding-inline: 0.5rem;
 }
 body nav div#items input[type=radio] {
   display: none;
 }
 body nav div#items input[type=radio]:checked + label {
-  border-bottom: 4px solid red;
-  transform-origin: left;
+  border-color: var(--var-1);
+  color: var(--var-1);
+  animation: color 0.3s, border-anim 0.3s ease-in-out;
+}
+body main {
+  display: flex;
+  flex-direction: column;
+  border: 1rem solid var(--dark);
+  height: calc(100vh - 2rem);
+  height: calc(100svh - 2rem);
+  overflow: scroll;
+}
+body main div#span-head {
+  background-color: var(--dark);
+}
+body main div#span-head span {
+  margin-inline: 2rem 0;
+  color: var(--light);
+  font-family: var(--head-font);
+  font-size: 24px;
+  text-transform: uppercase;
+  filter: drop-shadow(0.1rem 0.1rem var(--var-1));
+}
+body main div#span-head span span {
+  margin-inline-start: 0.5rem;
+  filter: none;
+}
+body main #home,
+body main #abt {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+  justify-content: center;
+  border: 0.25rem solid var(--var-1);
+}
+body main #home .image-carousel,
+body main #abt .image-carousel {
+  width: 35%;
+  height: 85vh;
+  height: 85svh;
+  background: no-repeat center url("../img/WHAoUx.jpg") fixed var(--dark);
+  background-size: cover;
+}
+body main #home .data,
+body main #abt .data {
+  width: 65%;
+  padding: 1rem 3rem;
+  text-align: justify;
+  background-color: var(--light);
+}
+body footer {
+  clip-path: polygon(0 0, 0% 100%, 100% 100%, 85% 0);
+  display: flex;
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  padding: 0.5rem 0;
+  background-color: var(--dark);
+}
+body footer a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  padding: 0 1rem;
+  text-decoration: none;
+  border-right: 2px solid var(--light);
+  transition: all 0.3s ease-in-out;
+  color: var(--light);
+  height: 1rem;
+}
+body footer a label {
+  display: none;
+  padding: 0.25rem;
+}
+body footer a:hover {
+  color: var(--var-1);
+}
+body footer a:hover label {
+  display: flex;
 }
 
 /*# sourceMappingURL=style.css.map */
